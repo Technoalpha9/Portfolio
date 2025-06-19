@@ -1,0 +1,46 @@
+#Importing and Variable Setup
+from random import randint
+userinput = None
+choice = randint(1,3)
+win = 2
+#For choice, 1=paper, 2=scissors, 3=rock.
+print("This is rock paper scissors. Choose either rock, paper, or scissors, and I will also choose one. Paper beats rock, scissors beat paper, and rock beats scissors!")
+while win != 1:
+	userinput = input("Type Rock, Paper, or Scissors: ")
+	choice = randint(1,3)
+	#if code picks rock
+	if choice == 3 and userinput == "Paper":
+		print("I picked rock.")
+		win = 1
+	elif choice == 3 and userinput == "Rock":
+		print("I picked rock.")
+		print("We Tied. Let's play another round!")
+	elif choice == 3 and userinput == "Scissors":
+		print("I picked rock.")
+		print("Oh No! You lost. Let's play another round!")
+
+	#Code picks paper
+	elif choice == 1 and userinput == "Scissors":
+		print("I picked paper.")
+		win = 1
+	elif choice == 1 and userinput == "Rock":
+		print("I picked paper.")
+		print("Oh No! You lost. Let's play another round!")
+	elif choice == 1 and userinput == "Paper":
+		print("I picked paper.")
+		print("We Tied. Let's play another round!")
+	#if code picks scissors
+	elif choice == 2 and userinput == "Paper":
+		print("I picked scissors.")
+		print("Oh No! You lost. Let's play another round!")
+	elif choice == 2 and userinput == "Rock":
+		print("I picked scissors.")
+		win = 1
+	elif choice == 2 and userinput == "Scissors":
+		print("I picked scissors.")
+		print("We Tied. Let's play another round!")
+	else:
+		print("Error! Please remember to capitalize and spell correctly!")
+
+
+print("You Won! Restart the code to play again!")
